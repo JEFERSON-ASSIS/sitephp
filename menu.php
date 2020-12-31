@@ -33,6 +33,7 @@
                 <a class="nav-item nav-link" href="listaUsuarios.php">Candidatos</a>
                 <a class="nav-item nav-link" href="vaga.php">Vagas</a>
                 <a class="nav-item nav-link" href="cadastro.php">Cadastro</a>
+                
             </div>            
         </div>
         <a class="btn btn-primary" href="../sistema/front/index.html" role="button" >Sair</a>
