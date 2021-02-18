@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
+     <!-- Favicons -->
+  <link href="img/favicon-32x32.png" rel="icon">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -16,15 +21,7 @@
 
 </head>
 <body>
-      <?php
-
-    session_start();
-    $usuario = $_SESSION['usuario'];
-    if(!isset($_SESSION['usuario'])){
-        header('Location: menu.php');
-    }
-
-    ?>
+     
 
 
         <!--aqui começa a div do cadastro usuario -->

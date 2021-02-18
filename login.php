@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <title>Login</title>
 
+     <!-- Favicons -->
+  <link href="img/favicon-32x32.png" rel="icon">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -25,7 +30,7 @@
         <center>
             <img src="imagem/cadeado.png" width="125px" height="125px">
         </center>
-        <form action="index1.php" method="post">
+        <form action="menu.php" method="post">
             <div class="form-group">
                 <label>Usuário</label>
                 <input type="text" name="usuario" class="form-control" placeholder="usuario" autocomplete="off" required="true">
@@ -43,7 +48,12 @@
 
 <div style="margin-top: 10px;">
     <center>
-        <small>Você não possui cadastro? clique <a href="cadastroExterno.php"> aqui </a></small>
+        <small>Você não possui cadastro? clique <a href="cadastroExterno.php"> aqui </a></small>      
+    </center>
+</div>
+<div>
+    <center>
+    <a class="btn btn-primary" href="./index.html" role="button" >Voltar ao site</a>
     </center>
 </div>
 

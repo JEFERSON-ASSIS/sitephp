@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+
+     <!-- Favicons -->
+  <link href="img/favicon-32x32.png" rel="icon">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -16,32 +21,27 @@
 
 </head>
 <body>
-      <?php
-
-    session_start();
-    $usuario = $_SESSION['usuario'];
-    if(!isset($_SESSION['usuario'])){
-        header('Location: menu.php');
-    }
-
-    ?>
+     
     
 <!--menu nav-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
         <div class="collapse navbar-collapse" >
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="menu.php">Home</a>
-                <a class="nav-item nav-link" href="listaUsuarios.php">Candidatos</a>
-                <a class="nav-item nav-link" href="vaga.php">Vagas</a>
-                <a class="nav-item nav-link" href="cadastro.php">Cadastro</a>
+            <a class="nav-item nav-link" href="menu.php">Home</a>
+                <a class="nav-item nav-link" href="experiencia.php">Experiência</a>
+                <a class="nav-item nav-link" href="primeiro.php">Primeiro Emprego</a>
+                <a class="nav-item nav-link" href="menor.php">Menor aprendiz</a>
+                <a class="nav-item nav-link" href="pcd.php">PCD</a>
+                <a class="nav-item nav-link" href="vaga.php">Vagas</a>                
+                <a class="nav-item nav-link" href="cadastro.php">Cadastro</a> 
             </div>            
         </div>
-        <a class="btn btn-primary" href="../sistema/front/index.html" role="button" >Sair</a>
+        <a class="btn btn-primary" href="./index.html" role="button" >Sair</a>
     </nav>
 
 
     <div class="container" id="tamanho">
-    <h4 style="text-align: center">Formulario de Cadastro</h4>
+    <h4 style="text-align: center">Cadastro Profissionais</h4>
         <form action="insere.php" method="post" style="margin-top: 20px;">        
             <div class="form-group">
                 <label>Nome</label>

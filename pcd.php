@@ -3,41 +3,41 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Usuarios</title>
+   <title>Usuários</title>
+
+    <!-- Favicons -->
+  <link href="img/favicon-32x32.png" rel="icon">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
   
 </head>
 <body>
-  <?php
-
-    session_start();
-    $usuario = $_SESSION['usuario'];
-    if(!isset($_SESSION['usuario'])){
-        header('Location: menu.php');
-    }
-
-    ?>
-  
+ 
 
 
 <!--menu nav-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
         <div class="collapse navbar-collapse" >
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="menu.php">Home</a>
-                <a class="nav-item nav-link" href="listaUsuarios.php">Candidatos</a>
-                <a class="nav-item nav-link" href="vaga.php">Vagas</a>
-                <a class="nav-item nav-link" href="cadastro.php">Cadastro</a>
-            </div>            
+            <a class="nav-item nav-link" href="menu.php">Home</a>
+                <a class="nav-item nav-link" href="experiencia.php">Experiência</a>
+                <a class="nav-item nav-link" href="primeiro.php">Primeiro Emprego</a>
+                <a class="nav-item nav-link" href="menor.php">Menor aprendiz</a>
+                <a class="nav-item nav-link" href="pcd.php">PCD</a>
+                <a class="nav-item nav-link" href="vaga.php">Vagas</a>                
+                <a class="nav-item nav-link" href="cadastro.php">Cadastro</a>  
+            </div>                      
         </div>
-        <a class="btn btn-primary" href="../sistema/front/index.html" role="button" >Sair</a>
-    </nav>
+        <a class="btn btn-primary" href="./index.html" role="button" >Sair</a>  
+    </nav> 
+
 
 <div class="container-fluid">
 
-<h3 style="text-align: center; ">Usuarios</h3>
+<h3 style="text-align: center; ">Usuários</h3>
 
 <!--começa dados dos users -->
 <table class="table table-striped">
@@ -49,26 +49,23 @@
       <th scope="col">Bairro</th>
       <th scope="col">Cidade</th>
       <th scope="col">Fone</th>
-      <th scope="col">Dt Nascimento</th>
-      <th scope="col">Profissão</th>
-      <th scope="col">Função</th>
+      <th scope="col">Nascimento</th>
+      <th scope="col">Tipo Deficiência</th>
+      <th scope="col">Funcao</th>
       <th scope="col">Experiência</th>
-      <th scope="col">Comprovada</th>
-      <th scope="col">Filhos</th>
-      <th scope="col">Estudos</th>
-      <th scope="col">Sabados</th>
-      <th scope="col">Fumante</th>
+      <th scope="col">Sabado</th>
+      <th scope="col">Fumante</th> 
     </tr>
   </thead>    
     
      <?php 
      include 'conexao.php';     
-     $sql= "SELECT * FROM cadastro ";
+     $sql= "SELECT * FROM pcd ";
      $busca = mysqli_query($conexao, $sql);
     
      while ($array = mysqli_fetch_array($busca)) {
       
-      $id_usuario = $array['id_usuarios'];
+      //$id_usuario = $array['id_usuarios'];
       $nome = $array['nome'];
       $sobrenome = $array['sobrenome'];
       $endereco = $array['endereco'];
@@ -76,14 +73,11 @@
       $cidade = $array['cidade'];
       $fone = $array['fone'];
       $dt_nasc = $array['dt_nasc'];
-      $profissao = $array['profissao'];
+      $tipo_deficiencia = $array['tipo_deficiencia'];
       $funcao = $array['funcao'];
-      $tempo_experiencia = $array['tempo_experiencia'];
-      $comprovada = $array['comprovada'];
-      $filho = $array['filho'];
-      $estudo = $array['estudo'];
+      $experiencia = $array['experiencia'];
       $sabado = $array['sabado'];
-      $fumante = $array['fumante'];
+      $fumante= $array['fumante'];     
     ?>
     
     <tr>
@@ -95,12 +89,9 @@
       <td> <?php echo $cidade ?> </td>
       <td> <?php echo $fone ?> </td>
       <td> <?php echo $dt_nasc ?> </td>
-      <td> <?php echo $profissao ?> </td>
+      <td> <?php echo $tipo_deficiencia ?> </td>
       <td> <?php echo $funcao ?> </td>
-      <td> <?php echo $tempo_experiencia ?> </td>
-      <td> <?php echo $comprovada ?> </td>
-      <td> <?php echo $filho ?> </td>
-      <td> <?php echo $estudo ?> </td>
+      <td> <?php echo $experiencia ?> </td>
       <td> <?php echo $sabado ?> </td>
       <td> <?php echo $fumante ?> </td>
     </tr>

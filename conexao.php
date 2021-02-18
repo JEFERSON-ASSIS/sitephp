@@ -1,9 +1,10 @@
 <?php
 $servername = "mysql742.umbler.com:41890";
-$username   = "recrutabot";
+$username   = "recruta";
 $password   = "senhadificil1";
-$database   = "chatbot";
+$database   = "recruta";
 
 //create connections
 $conexao = mysqli_connect($servername, $username, $password, $database);
+mysqli_set_charset($conexao,"utf8");
 ?>

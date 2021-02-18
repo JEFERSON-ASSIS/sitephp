@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-   <!-- Favicons -->
-   <link href="img/favicon-32x32.png" rel="icon">
-   <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Usuários</title>
 
-   <title>Vagas</title>
+    <!-- Favicons -->
+  <link href="img/favicon-32x32.png" rel="icon">
+  <link href="img/apple-icon-72x72.png" rel="apple-touch-icon">
+
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    
+  
 </head>
 <body>
-   
+ 
 
-    
+
 <!--menu nav-->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
         <div class="collapse navbar-collapse" >
             <div class="navbar-nav">
             <a class="nav-item nav-link" href="menu.php">Home</a>
@@ -28,65 +29,71 @@
                 <a class="nav-item nav-link" href="pcd.php">PCD</a>
                 <a class="nav-item nav-link" href="vaga.php">Vagas</a>                
                 <a class="nav-item nav-link" href="cadastro.php">Cadastro</a>  
-            </div>            
+            </div>                      
         </div>
-        <a class="btn btn-primary" href="./index.html" role="button" >Sair</a>
+        <a class="btn btn-primary" href="./index.html" role="button" >Sair</a>  
     </nav> 
+
 
 <div class="container-fluid">
 
-<h3 style="text-align: center;">Lista de Vagas</h3>
+<h3 style="text-align: center; ">Usuários</h3>
 
 <!--começa dados dos users -->
 <table class="table table-striped">
   <thead>    
     <tr>
-      <th scope="col">Nome Responsavel</th>
-      <th scope="col">Nome Empresa</th>
-      <th scope="col">Telefone</th>
-      <th scope="col">E-mail</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Sobrenome</th>
       <th scope="col">Endereço</th>
-      <th scope="col">Cargo</th>
-      <th scope="col">Descrição Vaga</th>
-      <th scope="col">Horário trabalho</th>
-      <th scope="col">Remunerção</th>  
+      <th scope="col">Bairro</th>
+      <th scope="col">Cidade</th>
+      <th scope="col">Fone</th>
+      <th scope="col">Dt Nascimento</th>
+      <th scope="col">Profissão</th>
+      <th scope="col">nivel</th>
+      <th scope="col">curso</th>
+      <th scope="col">Sabados</th>
+      <th scope="col">Fumante</th>
     </tr>
   </thead>    
     
      <?php 
      include 'conexao.php';     
-     $sql= "SELECT * FROM vaga ";
+     $sql= "SELECT * FROM primeiro ";
      $busca = mysqli_query($conexao, $sql);
     
      while ($array = mysqli_fetch_array($busca)) {
       
-     // $id_usuario = $array['id_vaga'];
-      $Nome_Responsavel = $array['nome_responsavel'];
-      $Nome_empresa = $array['nome_empresa'];
-      $fone_empresa = $array['fone_empresa'];
-      $email_empresa = $array['email_empresa'];
-      $endereco_empresa = $array['endereco_empresa'];
-      $cargo_ofertado = $array['cargo_ofertado'];
-      $descricao_vaga = $array['descricao_vaga'];
-      $horario_trabalho = $array['horario_trabalho'];
-     // $conhecimento_exigidos = $array['conhecimento_exigidos'];
-      $salario = $array['salario'];
-     
+      //$id_usuario = $array['id_usuarios'];
+      $nome = $array['nome'];
+      $sobrenome = $array['sobrenome'];
+      $endereco = $array['endereco'];
+      $bairro = $array['bairro'];
+      $cidade = $array['cidade'];
+      $fone = $array['fone'];
+      $dt_nasc = $array['dt_nasc'];
+      $profissao = $array['profissao'];
+      $nivel = $array['nivel'];
+      $curso = $array['curso'];
+      $sabado = $array['sabado'];
+      $fumante = $array['fumante'];
     ?>
     
     <tr>
       <!--mostra valores dos itens salvos-->
-      <td> <?php echo $Nome_Responsavel ?> </td>
-      <td> <?php echo $Nome_empresa ?> </td>
-      <td> <?php echo $fone_empresa ?> </td>
-      <td> <?php echo $email_empresa ?> </td>
-      <td> <?php echo $endereco_empresa ?> </td>
-      <td> <?php echo $cargo_ofertado ?> </td>
-      <td> <?php echo $descricao_vaga ?> </td>
-      <td> <?php echo $horario_trabalho ?> </td>
-     
-      <td> <?php echo $salario ?> </td>
-      
+      <td> <?php echo $nome ?> </td>
+      <td> <?php echo $sobrenome ?> </td>
+      <td> <?php echo $endereco ?> </td>
+      <td> <?php echo $bairro ?> </td>
+      <td> <?php echo $cidade ?> </td>
+      <td> <?php echo $fone ?> </td>
+      <td> <?php echo $dt_nasc ?> </td>
+      <td> <?php echo $profissao ?> </td>
+      <td> <?php echo $nivel ?> </td>
+      <td> <?php echo $curso ?> </td>
+      <td> <?php echo $sabado ?> </td>
+      <td> <?php echo $fumante ?> </td>
     </tr>
 
 
