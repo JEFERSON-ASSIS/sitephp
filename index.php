@@ -19,13 +19,14 @@
 </script>
 
 </head>
-<body>    
+<body>   
+
     
     <!--menu nav-->
  <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" >
             <div class="navbar-nav">
-                <a class="nav-item nav-link" href="menu.php">Home</a>
+                <a class="nav-item nav-link" href="index.php">Home</a>
                 <a class="nav-item nav-link" href="experiencia.php">Experiência</a>
                 <a class="nav-item nav-link" href="primeiro.php">Primeiro Emprego</a>
                 <a class="nav-item nav-link" href="menor.php">Menor aprendiz</a>
