@@ -1,2 +1,2 @@
 # sitephp
-# site em php para administrar sistema chatbot de atendimento.
+## Site em PHP para administrar sistema atendimento do chatbot Recruta.
